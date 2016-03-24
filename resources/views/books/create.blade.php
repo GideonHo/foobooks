@@ -13,42 +13,34 @@
         {{ csrf_field() }}
 
         <div class='form-group'>
-           <label>* Title:</label>
-           <input
-               type='text'
-               id='title'
-               name='title'
-               value='{{ old('title') }}'
-           >
-           <div class='error'>{{ $errors->first('title') }}</div>
+           	<label>* Title:</label>
+           	<input type='text' id='title' name='title' value='{{ old('title') }}'>
+           	<div class='error'>
+           		{{ $errors->first('title') }}
+           	</div>
         </div>
 
         <div class='form-group'>
-           <label>* Author:</label>
-           <input
-               type='text'
-               id='author'
-               name='author'
-               value='{{ old('author') }}'
-           >
-           <div class='error'>{{ $errors->first('author') }}</div>
+           	<label>* Author:</label>
+           	<input type='text' id='author' name='author'value='{{ old('author') }}'>
+           	<div class='error'>
+           		{{ $errors->first('author') }}
+           	</div>
         </div>
 
         <button type="submit" class="btn btn-primary">Add book</button>
 
-        {{--
-        <ul class=''>
-            @foreach($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-        --}}
+		<ul class=''>
+			@foreach($errors->all() as $error)
+				<li>{{ $error }}</li>
+			@endforeach
+		</ul>
 
-        <div class='error'>
-            @if(count($errors) > 0)
-                Please correct the errors above and try again.
-            @endif
-        </div>
+		<div class='error'>
+			@if(count($errors)>0)
+				Please corect the error above and try again.
+			@endif
+		</div>
 
     </form>
 @stop
