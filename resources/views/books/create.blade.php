@@ -30,11 +30,11 @@
 
         <button type="submit" class="btn btn-primary">Add book</button>
 
-		<ul class=''>
+		{{--<ul class=''>
 			@foreach($errors->all() as $error)
 				<li>{{ $error }}</li>
 			@endforeach
-		</ul>
+		</ul>--}}
 
 		<div class='error'>
 			@if(count($errors)>0)
