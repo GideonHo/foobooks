@@ -7,7 +7,20 @@ Route::group(['middleware' => ['web']], function () {
 	Route::get('/', function () {
 	    return view('welcome');
 	});
-	
+
+	Route::get('/practice/ex1','PracticeController@getEx1');
+	Route::get('/practice/ex2','PracticeController@getEx2');
+	Route::get('/practice/ex3','PracticeController@getEx3');
+	Route::get('/practice/ex4','PracticeController@getEx4');
+	Route::get('/practice/ex5','PracticeController@getEx5');
+	Route::get('/practice/ex6','PracticeController@getEx6');
+	Route::get('/practice/ex7','PracticeController@getEx7');
+	Route::get('/practice/ex8','PracticeController@getEx8');
+
+	Route::get('/practicedebug/ex1','PracticeDebugController@getEx1');
+	Route::get('/practicedebug/ex2','PracticeDebugController@getEx2');
+	Route::get('/practicedebug/ex3','PracticeDebugController@getEx3');
+
 	Route::get('/books', 'BookController@getIndex');
 	Route::get('/books/create', 'BookController@getCreate');
 	Route::post('/books/create', 'BookController@postCreate');
@@ -85,3 +98,4 @@ if(App::environment('local')) {
     });
 
 };
+
